@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Camila DeMelo Portfolio Design System - Dark-first, High Contrast, Accessible */
+
+@layer base {
+    :root {
+        /* Dark theme primary (will be used as default) */
+        --background: 220 27% 8%;
+        --foreground: 210 40% 98%;
+
+        --card: 220 25% 10%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 220 25% 10%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 193 100% 50%;
+        --primary-foreground: 220 27% 8%;
+
+        --secondary: 220 20% 15%;
+        --secondary-foreground: 210 40% 95%;
+
+        --muted: 220 20% 12%;
+        --muted-foreground: 215 20% 65%;
+
+        --accent: 280 100% 70%;
+        --accent-foreground: 220 27% 8%;
+
+        --destructive: 0 75% 60%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 220 20% 18%;
+        --input: 220 20% 15%;
+        --ring: 193 100% 50%;
+
+        --radius: 0.75rem;
+
+        /* Custom design tokens */
+        --gradient-primary: linear-gradient(135deg, hsl(193 100% 50%), hsl(280 100% 70%));
+        --gradient-subtle: linear-gradient(180deg, hsl(220 25% 10%), hsl(220 27% 8%));
+        --shadow-glow: 0 0 40px hsl(193 100% 50% / 0.3);
+        --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .light {
+        --background: 210 40% 98%;
+        --foreground: 220 27% 8%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 220 27% 8%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 220 27% 8%;
+
+        --primary: 193 100% 40%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 220 27% 8%;
+
+        --muted: 210 40% 95%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 280 100% 60%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 193 100% 40%;
+
+        --shadow-glow: 0 0 40px hsl(193 100% 40% / 0.2);
+        --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-inter;
+    }
+}
+
+@layer components {
+
+    /* Hero text with gradient */
+    .hero-text {
+        @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse;
+    }
+
+    /* Glowing button variant */
+    .btn-glow {
+        @apply relative overflow-hidden;
+        background: var(--gradient-primary);
+        box-shadow: var(--shadow-glow);
+        transition: var(--transition-smooth);
+    }
+
+    .btn-glow:hover {
+        box-shadow: 0 0 60px hsl(193 100% 50% / 0.4);
+        transform: translateY(-1px);
+    }
+
+    /* Card with gradient border */
+    .card-gradient {
+        @apply relative p-6 rounded-lg overflow-hidden;
+        background: var(--gradient-subtle);
+        box-shadow: var(--shadow-elegant);
+    }
+
+    .card-gradient::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        background: var(--gradient-primary);
+        border-radius: inherit;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+    }
+
+    /* Smooth animations */
+    .animate-smooth {
+        transition: var(--transition-smooth);
+    }
+
+    /* Hover scale */
+    .hover-scale {
+        @apply animate-smooth hover:scale-105;
+    }
+
+    /* Text glow effect */
+    .text-glow {
+        text-shadow: 0 0 20px hsl(193 100% 50% / 0.5);
+    }
+}
