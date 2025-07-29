@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-2">
-              <span className="hero-text">Camila DeMelo</span>
+              <span className="hero-text">MilaMelo</span>
             </h3>
             <p className="text-muted-foreground">
               Full-Stack Developer & Visual Problem Solver
@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center md:justify-end gap-4">
             <a
-              href="https://github.com/camilademelo"
+              href="https://github.com/milamelo4"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
@@ -50,7 +50,7 @@ const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/camilademelo"
+              href="https://www.linkedin.com/in/camila-demelo-6aa66647"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
@@ -59,7 +59,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:camila.portfolio@example.com"
+              href="mailto:milamelodev@gmail.com"
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
               aria-label="Email"
             >
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-            © {currentYear} Camila DeMelo. Made with <Heart className="h-4 w-4 text-red-500" /> in Salt Lake City
+            © {currentYear} MilaMelo. Made with <Heart className="h-4 w-4 text-primary fill-500" /> All rights reserved.
           </p>
         </div>
       </div>

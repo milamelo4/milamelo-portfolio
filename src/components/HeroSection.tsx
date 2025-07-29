@@ -19,7 +19,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 Hi, I'm{" "}
-                <span className="hero-text">Camila DeMelo</span>
+                <span className="hero-text">MilaMelo</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-muted-foreground">
                 Full-Stack Developer & Visual Problem Solver
@@ -36,15 +36,18 @@ const HeroSection = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
               </Button>
-              <Button variant="outline" className="hover-scale">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
+              <a href="/resume.pdf" download>
+                <Button variant="outline" className="hover-scale">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </Button>
+              </a>
+
             </div>
 
             <div className="flex gap-6 justify-center lg:justify-start">
               <a
-                href="https://github.com/camilademelo"
+                href="https://github.com/milamelo4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-accent transition-colors hover-scale"
@@ -52,7 +55,7 @@ const HeroSection = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com/in/camilademelo"
+                href="https://www.linkedin.com/in/camila-demelo-6aa66647"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-accent transition-colors hover-scale"

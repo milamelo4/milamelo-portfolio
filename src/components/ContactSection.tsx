@@ -44,8 +44,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "camila.portfolio@example.com",
-      href: "mailto:camila.portfolio@example.com"
+      value: "milamelodev@gmail.com",
+      href: "mailto:milamelodev@gmail.com"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
@@ -56,14 +56,15 @@ const ContactSection = () => {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      value: "github.com/camilademelo",
-      href: "https://github.com/camilademelo"
+      value: "github.com/milamelo4",
+      href: "https://github.com/milamelo4"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      value: "linkedin.com/in/camilademelo",
-      href: "https://linkedin.com/in/camilademelo"
+      value: "linkedin.com/in/camila-demelo-6aa66647",
+      href: "https://www.linkedin.com/in/camila-demelo-6aa66647"
+
     }
   ];
 
