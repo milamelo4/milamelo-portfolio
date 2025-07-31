@@ -76,8 +76,8 @@ const ContactSection = () => {
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-6 text-left">
+        <div className="mb-16 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Let's <span className="hero-text">Connect</span>
           </h2>
