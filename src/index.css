@@ -12,6 +12,7 @@
         --background: 220 27% 8%;
         --foreground: 210 40% 98%;
 
+
         --card: 220 25% 10%;
         --card-foreground: 210 40% 98%;
 
@@ -40,7 +41,7 @@
         --radius: 0.75rem;
 
         /* Custom design tokens */
-        --gradient-primary: linear-gradient(135deg, hsl(193 100% 50%), hsl(280 100% 70%));
+        --gradient-primary: linear-gradient(135deg, hsl(193 100% 50%), hsl(145, 100%, 70%));
         --gradient-subtle: linear-gradient(180deg, hsl(220 25% 10%), hsl(220 27% 8%));
         --shadow-glow: 0 0 40px hsl(193 100% 50% / 0.3);
         --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
@@ -95,13 +96,13 @@
 
     /* Hero text with gradient */
     .hero-text {
-        @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse;
+        @apply bg-gradient-to-r from-primary via-emerald-500 to-primary bg-clip-text text-transparent animate-pulse;
     }
 
     /* Glowing button variant */
     .btn-glow {
         @apply relative overflow-hidden;
-        background: var(--gradient-primary);
+        background: var(--test);
         box-shadow: var(--shadow-glow);
         transition: var(--transition-smooth);
     }

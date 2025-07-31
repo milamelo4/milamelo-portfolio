@@ -32,12 +32,12 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button onClick={scrollToContact} className="btn-glow">
+              <Button onClick={scrollToContact} variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white">
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
               </Button>
               <a href="/resume.pdf" download>
-                <Button variant="outline" className="hover-scale">
+                <Button variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </Button>
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 href="https://github.com/milamelo4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-accent transition-colors hover-scale"
+                className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
               >
                 <Github className="h-6 w-6" />
               </a>
@@ -58,13 +58,13 @@ const HeroSection = () => {
                 href="https://www.linkedin.com/in/camila-demelo-6aa66647"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-accent transition-colors hover-scale"
+                className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="mailto:camila.portfolio@example.com"
-                className="p-3 rounded-full bg-secondary hover:bg-accent transition-colors hover-scale"
+                href="mailto:milamelodev@gmail.com"
+                className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
               >
                 <Mail className="h-6 w-6" />
               </a>

@@ -43,12 +43,18 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-700 backdrop-blur-md border-b border-border shadow-md shadow-black/10 border-b border-gray-600">
+      <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">
-            <span className="hero-text">MilaMelo</span>
-          </div>
+          {/* <span className="text-3xl tracking-wider text-sky-300 font-semibold drop-shadow-md">
+          Mila<span className="text-white">Melo</span>
+        </span> */}
+        <div className="flex items-center gap-x-2 inline-flex ">
+          <img src="assets/preview.png" alt="logo" width={45} height={40}/>
+          <span className="font-inter text-sky-300 font-semibold text-lg tracking-wider">MilaMelo</span>
+        </div>
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -56,10 +62,10 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
-                className={`transition-colors hover:text-primary ${
+                className={`transition-colors hover:text-sky-300 shadow-sm ${
                   activeSection === item.href.substring(1)
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-sky-300 font-semibold"
+                    : "text-foreground"
                 }`}
               >
                 {item.label}
