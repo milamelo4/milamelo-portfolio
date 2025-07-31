@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left space-y-8">
+          <div className="text-left space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 Hi, I'm{" "}
