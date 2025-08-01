@@ -42,7 +42,7 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div className="card-gradient">
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
@@ -53,7 +53,7 @@ const AboutSection = () => {
                   I'm Camila DeMelo — a web developer based in Salt Lake City, originally from São Paulo, Brazil. I bring a global perspective to everything I create.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm passionate about coding, debugging, and building clean, user-friendly web experiences. As someone who's dyslexic and a highly visual thinker, I love solving complex problems through both design and co
+                  I'm passionate about coding, debugging, and building clean, user-friendly web experiences. As someone who's dyslexic and a highly visual thinker, I love solving complex problems through both design and code.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   My approach blends technical skills with a strong eye for design, which helps me create websites that are not only functional but also accessible and intuitive for everyone.
