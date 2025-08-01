@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, MapPin, Code2, Palette } from "lucide-react";
+import { GraduationCap, MapPin, Code2, Laptop2, ScrollIcon  } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
@@ -7,7 +7,7 @@ const AboutSection = () => {
   const education = [
     {
       degree: "Bachelor of Computer Science",
-      year: "2025",
+      year: "Completed",
       icon: <GraduationCap className="h-5 w-5" />
     },
     {
@@ -16,9 +16,9 @@ const AboutSection = () => {
       icon: <Code2 className="h-5 w-5" />
     },
     {
-      degree: "Certificates in Python, Web Design & Full-Stack Development",
+      degree: "Certificates in Computer Programming, Web Design & Full-Stack Development",
       year: "Completed",
-      icon: <Palette className="h-5 w-5" />
+      icon: <ScrollIcon className="h-5 w-5" />
     }
   ];
 
@@ -30,7 +30,7 @@ const AboutSection = () => {
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-6 text-left">
+      <div className="container mx-auto px-0 sm:px-6 text-left">
         <div className="mb-16 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             About <span className="hero-text">Me</span>
@@ -50,23 +50,42 @@ const AboutSection = () => {
                   <span className="text-lg font-semibold">Salt Lake City, Utah</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Camila DeMelo is a web developer based in Salt Lake City, Utah. Originally from 
-                  São Paulo, Brazil, she brings a global perspective to her creative work.
+                  I'm Camila DeMelo — a web developer based in Salt Lake City, originally from São Paulo, Brazil. I bring a global perspective to everything I create.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  She's passionate about coding, debugging, and creating clean, user-friendly web 
-                  experiences. As a dyslexic and highly visual thinker, Camila excels at solving 
-                  complex problems through design and code.
+                  I'm passionate about coding, debugging, and building clean, user-friendly web experiences. As someone who's dyslexic and a highly visual thinker, I love solving complex problems through both design and co
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Her unique approach to development combines technical expertise with visual design 
-                  sensibility, making her particularly effective at creating accessible and 
-                  intuitive user interfaces.
-                </p>
+                  My approach blends technical skills with a strong eye for design, which helps me create websites that are not only functional but also accessible and intuitive for everyone.
+                </p>                
+              </div>              
+            </div>
+          {/* Skills */}
+          <div className="space-y-6">
+            <div className="card-gradient p-6 rounded-lg">
+              
+           <div className="flex items-center gap-3 mb-4">
+            <Laptop2  className="h-6 w-6 text-primary" />
+            <h3 className="text-xl font-semibold">Technical Skills</h3>
+          </div>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">HTML</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">CSS</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">JavaScript</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Python</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Node.js</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">PostgreSQL</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">MongoDB</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Bootstrap</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Tailwind CSS</span>
+                <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Git</span>
               </div>
             </div>
           </div>
 
+
+          </div>
+          
           {/* Education */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold mb-6">Education & Certifications</h3>
@@ -87,9 +106,9 @@ const AboutSection = () => {
                 </Card>
               ))}
             </div>
-
+              
             {/* Skills Highlight */}
-            <div className="mt-8 p-6 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+            <div className="mt-8 p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/20">
               <h4 className="font-semibold text-lg mb-3">Key Strengths</h4>
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div className="flex items-center gap-2">
@@ -115,6 +134,7 @@ const AboutSection = () => {
       </div>
     </section>
   );
+  
 };
 
 export default AboutSection;

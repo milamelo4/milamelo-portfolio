@@ -66,7 +66,7 @@ const PortfolioSection = () => {
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-6 text-left">
+      <div className="container mx-auto px-0 sm:px-6 text-left">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             My <span className="hero-text">Portfolio</span>
@@ -137,7 +137,7 @@ const PortfolioSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-block p-6 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+          <div className="inline-block p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/20 border border-primary/20">
             <h3 className="text-xl font-bold mb-2">More Projects Coming Soon!</h3>
             <p className="text-muted-foreground">
               I'm constantly working on new projects and expanding my portfolio. 

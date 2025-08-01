@@ -1,17 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Code, Database, Globe, Mail, Palette, Users } from "lucide-react";
+import { Code2Icon, Database, Globe, Mail, Palette, Users } from "lucide-react";
 
 const ServicesSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const services = [
     {
-      icon: <Globe className="h-8 w-8" />,
+      icon: <Globe className="h-8 w-8 " />,
       title: "Custom Website Development",
       description: "Modern, responsive websites built with the latest technologies and best practices for optimal performance and user experience."
     },
     {
-      icon: <Code className="h-8 w-8" />,
+      icon: <Code2Icon className="h-8 w-8" />,
       title: "Full-Stack Web Applications",
       description: "Complete web applications with frontend and backend development, including user authentication, API integration, and data management."
     },
@@ -45,7 +45,7 @@ const ServicesSection = () => {
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-6 text-left">
+      <div className="container mx-auto px-0 sm:px-6 text-left">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             My <span className="hero-text">Services</span>
@@ -62,7 +62,8 @@ const ServicesSection = () => {
               className="hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30"
             >
               <CardHeader>
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground mb-4">
+                <div className="w-16 h-16 rounded-lg flex items-center justify-center text-primary-foreground mb-4"
+                style={{ background: "var(--gradient-primary)" }}>
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -77,7 +78,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-block p-6 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
+          <div className="inline-block p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/20 border border-primary/20">
             <h3 className="text-2xl font-bold mb-2">Special Offer</h3>
             <p className="text-lg text-muted-foreground">
               <span className="text-primary font-semibold">Free content updates</span> for the first year with any website project!

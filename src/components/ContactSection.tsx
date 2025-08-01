@@ -72,11 +72,11 @@ const ContactSection = () => {
     <section 
       ref={ref}
       id="contact" 
-      className={`py-20 transition-all duration-700 ${
+      className={`py-10 transition-all duration-700 ${
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto px-6 text-left">
+      <div className="container mx-auto px-0 sm:px-6 text-left">
         <div className="mb-16 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Let's <span className="hero-text">Connect</span>
