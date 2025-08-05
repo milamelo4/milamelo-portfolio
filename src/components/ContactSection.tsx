@@ -69,138 +69,136 @@ const ContactSection = () => {
   ];
 
   return (
-    <section 
-      ref={ref}
-      id="contact" 
-      className={`py-10 transition-all duration-700 ${
-        isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="container mx-auto px-0 sm:px-6 text-left">
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Let's <span className="hero-text">Connect</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss your next project!
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="hover-scale animate-smooth">
-            <CardHeader>
-              <CardTitle className="text-2xl">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary/50"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="bg-secondary/50 resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full btn-glow" 
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always excited to discuss new projects and opportunities. 
-                Whether you need a complete web application or just want to chat 
-                about development, feel free to reach out!
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    {item.icon}
+    <div className="max-w-[1280px] mx-auto px-4 lg:px-20 text-center">
+      <section
+        ref={ref}
+        id="contact"
+        className={`py-10 sm:py-20 transition-all duration-700 ${
+          isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
+        }`}
+      >
+        <div className="container mx-auto px-0 sm:px-6 text-left">
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Let's <span className="hero-text">Connect</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Ready to bring your ideas to life? Let's discuss your next project!
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Contact Form */}
+            <Card className="hover-scale animate-smooth">
+              <CardHeader>
+                <CardTitle className="text-2xl">Send a Message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50"
+                    />
                   </div>
-                  <div>
-                    <p className="font-medium">{item.label}</p>
-                    {item.href ? (
-                      <a 
-                        href={item.href}
-                        target={item.href.startsWith('http') ? "_blank" : undefined}
-                        rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {item.value}
-                      </a>
+      
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-secondary/50"
+                    />
+                  </div>
+      
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={6}
+                      className="bg-secondary/50 resize-none"
+                      placeholder="Tell me about your project..."
+                    />
+                  </div>
+      
+                  <Button
+                    type="submit"
+                    className="w-full btn-glow"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      "Sending..."
                     ) : (
-                      <p className="text-muted-foreground">{item.value}</p>
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Message
+                      </>
                     )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Availability Status */}
-            <div className="p-6 rounded-lg bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-semibold">Currently Available</span>
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  I'm always excited to discuss new projects and opportunities.
+                  Whether you need a complete web application or just want to chat
+                  about development, feel free to reach out!
+                </p>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Taking on new projects and excited to work with you!
-              </p>
+              <div className="space-y-4">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-secondary/30">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="font-medium">{item.label}</p>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target={item.href.startsWith('http') ? "_blank" : undefined}
+                          rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground">{item.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Availability Status */}
+              <div className="p-6 rounded-lg bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="font-semibold">Currently Available</span>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Taking on new projects and excited to work with you!
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
