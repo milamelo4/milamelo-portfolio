@@ -9,12 +9,13 @@ const PortfolioSection = () => {
   const projects = [
     {
       title: "ZCleaning App",
-      description: "Full-stack business application with scheduling, payment processing, and multi-user role management. Senior project showcasing complete development lifecycle.",
+      description: "A full-stack business app built for a real cleaning company. Features include client scheduling, payment tracking, and multi-user role management. This was my senior project and showcases the full development lifecycle—from planning to deployment.",
       technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
       status: "completed",
+      video: "/videos/zcleaning.mp4", // Placeholder for video link
       image: "/placeholder-project1.jpg",
-      github: "#",
-      live: "#"
+      github: "https://github.com/milamelo4/zcleaning-app.git",
+      live: "https://zcleaning-app.onrender.com"
     },
     {
       title: "Therapist Website",
@@ -82,9 +83,19 @@ const PortfolioSection = () => {
                 key={index}
                 className="hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30 overflow-hidden"
               >
+                {project.video ? (
+                <div className="aspect-video">
+                  <video
+                    src={project.video}
+                    controls
+                    className="w-full h-full rounded-md"
+                  />
+                </div>
+              ) : (
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <div className="text-muted-foreground text-sm">Project Screenshot</div>
                 </div>
+              )}
       
                 <CardHeader>
                   <div className="flex items-center justify-between">
@@ -127,7 +138,7 @@ const PortfolioSection = () => {
                         onClick={() => window.open(project.live, "_blank")}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
+                        Preview (Limited Access)
                       </Button>
                     </div>
                   )}
