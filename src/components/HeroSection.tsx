@@ -71,7 +71,7 @@ const HeroSection = () => {
             {/* Profile Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-10 animate-pulse"></div>
                 <img src="/assets/profile.png" alt="Profile picture" className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale" />
                 {/* <img
                   src={profileImage}
@@ -79,6 +79,7 @@ const HeroSection = () => {
                   className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale"
                 /> */}
               </div>
+            
             </div>
           </div>
         </div>
