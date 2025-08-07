@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/milamelo-portfolio/", // this is CRITICAL for GitHub Pages
+  base: "/", // this is CRITICAL for GitHub Pages
   plugins: [react()],
   resolve: {
     alias: {
