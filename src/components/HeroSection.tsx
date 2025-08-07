@@ -36,12 +36,13 @@ const HeroSection = () => {
                   <Mail className="mr-2 h-4 w-4" />
                   Get In Touch
                 </Button>
-                <a href="/resume.pdf" download>
+                <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
                   <Button variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48">
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </Button>
                 </a>
+
               </div>
               <div className="flex gap-6 justify-center lg:justify-start">
                 <a
