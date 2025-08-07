@@ -86,7 +86,7 @@ const PortfolioSection = () => {
                 {project.video ? (
                 <div className="aspect-video">
                   <video
-                    src={project.video}
+                    src={`${import.meta.env.BASE_URL}${project.video}`}
                     controls
                     className="w-full h-full rounded-md"
                   />
