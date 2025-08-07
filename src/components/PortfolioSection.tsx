@@ -5,6 +5,7 @@ import { ExternalLink, Github, Clock, CheckCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // At the top of your component file, import the video
 import zCleaningVideo from "../../public/videos/zcleaning.mp4"; 
+import therapistSite from "../../public/assets/therapist.png"
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -24,7 +25,7 @@ const PortfolioSection = () => {
       description: "Responsive one-page website with integrated contact form and appointment scheduling. Clean, professional design focused on user experience.",
       technologies: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
       status: "completed",
-      image: "/placeholder-project2.jpg",
+      image: therapistSite,
       github: "https://github.com/milamelo4/therapist-template.git",
       live: "https://milamelo4.github.io/therapist-template/"
     },
