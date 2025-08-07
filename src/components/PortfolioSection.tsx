@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Clock, CheckCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+// At the top of your component file, import the video
+import zCleaningVideo from "../../public/videos/zcleaning.mp4"; 
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -12,7 +14,7 @@ const PortfolioSection = () => {
       description: "A full-stack business app built for a real cleaning company. Features include client scheduling, payment tracking, and multi-user role management. This was my senior project and showcases the full development lifecycle—from planning to deployment.",
       technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
       status: "completed",
-      video: "/videos/zcleaning.mp4", // Placeholder for video link
+      video: zCleaningVideo, // Placeholder for video link
       image: "/placeholder-project1.jpg",
       github: "https://github.com/milamelo4/zcleaning-app.git",
       live: "https://zcleaning-app.onrender.com"
@@ -86,7 +88,7 @@ const PortfolioSection = () => {
                 {project.video ? (
                 <div className="aspect-video">
                   <video
-                    src={`${import.meta.env.BASE_URL}${project.video}`}
+                    src={projects[0].video}
                     controls
                     className="w-full h-full rounded-md"
                   />
