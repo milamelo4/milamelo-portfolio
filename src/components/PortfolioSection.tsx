@@ -25,8 +25,8 @@ const PortfolioSection = () => {
       technologies: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
       status: "coming-soon",
       image: "/placeholder-project2.jpg",
-      github: "#",
-      live: "#"
+      github: "https://github.com/milamelo4/therapist-template.git",
+      live: "https://milamelo4.github.io/therapist-template/"
     },
     {
       title: "Speech Pathologist Site",
