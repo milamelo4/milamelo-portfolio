@@ -23,7 +23,7 @@ const PortfolioSection = () => {
       title: "Therapist Website",
       description: "Responsive one-page website with integrated contact form and appointment scheduling. Clean, professional design focused on user experience.",
       technologies: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
-      status: "coming-soon",
+      status: "completed",
       image: "/placeholder-project2.jpg",
       github: "https://github.com/milamelo4/therapist-template.git",
       live: "https://milamelo4.github.io/therapist-template/"
