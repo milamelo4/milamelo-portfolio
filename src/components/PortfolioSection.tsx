@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Clock, CheckCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // At the top of your component file, import the video
-import zCleaningVideo from "../../public/videos/zcleaning.mp4"; 
-import therapistSite from "../../public/assets/therapist.png"
+import zCleaningVideo from "/videos/zcleaning.mp4"; 
+import therapistSite from "/assets/therapist.png"
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -96,7 +96,7 @@ const PortfolioSection = () => {
                 </div>
               ) : (
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-muted-foreground text-sm">Project Screenshot</div>
+                  <img src={project.image} alt="Therapist Template landing page" />
                 </div>
               )}
       
@@ -129,7 +129,7 @@ const PortfolioSection = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1"
+                        className="flex-1 "
                         onClick={() => window.open(project.github, "_blank")}
                       >
                         <Github className="h-4 w-4 mr-2" />
@@ -141,7 +141,7 @@ const PortfolioSection = () => {
                         onClick={() => window.open(project.live, "_blank")}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Preview (Limited Access)
+                        Preview
                       </Button>
                     </div>
                   )}
