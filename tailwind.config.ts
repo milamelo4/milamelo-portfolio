@@ -74,6 +74,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(16px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -97,5 +101,6 @@ export default {
 			}
 		}
 	},
+	
 	plugins: [animate],
 } satisfies Config;

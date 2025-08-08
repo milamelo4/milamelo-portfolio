@@ -96,7 +96,7 @@ const PortfolioSection = () => {
                 </div>
               ) : (
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <img src={project.image} alt="Therapist Template landing page" />
+                  <img src={project.image} alt="Placeholder Image" />
                 </div>
               )}
       
