@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Clock, CheckCircle, Play } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-// At the top of your component file, import the video
 import zCleaningVideo from "/videos/zcleaning.mp4"; 
-import therapistSite from "/assets/therapist.png"
+
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -16,7 +15,7 @@ const PortfolioSection = () => {
       technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
       status: "completed",
       video: zCleaningVideo, // Placeholder for video link
-      image: "/assets/zcleaning.png",
+      image: "assets/zcleaning.png",
       github: "https://github.com/milamelo4/zcleaning-app.git",
       live: "https://zcleaning-app.onrender.com"
     },
@@ -25,7 +24,7 @@ const PortfolioSection = () => {
       description: "Responsive one-page template for therapists. Includes sections for services, about, testimonials, and a contact form placeholder. Deployed to GitHub Pages.",
       technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
       status: "completed",
-      image: therapistSite,
+      image: "assets/therapist.png",
       video: 'undefined',
       github: "https://github.com/milamelo4/therapist-template.git",
       live: "https://milamelo4.github.io/therapist-template/"
@@ -88,7 +87,8 @@ const PortfolioSection = () => {
                 className="flex flex-col h-full hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30 overflow-hidden"
               >                
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <img src={project.image}
+                  <img 
+                  src={`${import.meta.env.BASE_URL}${project.image}`}
                   alt={`${project.title} preview`}
                   loading="lazy"              
                   className="w-full h-full object-cover" />

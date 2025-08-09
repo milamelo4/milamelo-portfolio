@@ -45,16 +45,10 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-700 backdrop-blur-md border-b border-border shadow-md shadow-black/10 border-b border-gray-600">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* <span className="text-3xl tracking-wider text-sky-300 font-semibold drop-shadow-md">
-          Mila<span className="text-white">Melo</span>
-        </span> */}
+        <div className="flex items-center justify-between">          
         <div className="flex items-center gap-x-2 inline-flex ">
-          {/* <img src="assets/logo.png" alt="logo" className="h-20 w-auto"/> */}
-          {/* <span className="font-inter text-sky-300 font-semibold text-lg tracking-wider">MilaMelo</span> */}
-        </div>
-           
-
+          <span className="font-inter hero-text font-semibold text-lg tracking-wider">MilaMelo</span>
+        </div>        
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
