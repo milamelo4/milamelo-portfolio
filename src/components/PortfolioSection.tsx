@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Clock, CheckCircle } from "lucide-react";
+import { ExternalLink, Github, Clock, CheckCircle, Play } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // At the top of your component file, import the video
 import zCleaningVideo from "/videos/zcleaning.mp4"; 
@@ -16,16 +16,17 @@ const PortfolioSection = () => {
       technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
       status: "completed",
       video: zCleaningVideo, // Placeholder for video link
-      image: "/placeholder-project1.jpg",
+      image: "/assets/zcleaning.png",
       github: "https://github.com/milamelo4/zcleaning-app.git",
       live: "https://zcleaning-app.onrender.com"
     },
     {
       title: "Therapist Website",
-      description: "Responsive one-page website with integrated contact form and appointment scheduling. Clean, professional design focused on user experience.",
-      technologies: ["React", "Tailwind CSS", "EmailJS", "Responsive Design"],
+      description: "Responsive one-page template for therapists. Includes sections for services, about, testimonials, and a contact form placeholder. Deployed to GitHub Pages.",
+      technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
       status: "completed",
       image: therapistSite,
+      video: 'undefined',
       github: "https://github.com/milamelo4/therapist-template.git",
       live: "https://milamelo4.github.io/therapist-template/"
     },
@@ -80,25 +81,18 @@ const PortfolioSection = () => {
               A showcase of my recent projects and technical expertise
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30 overflow-hidden"
-              >
-                {project.video ? (
-                <div className="aspect-video">
-                  <video
-                    src={projects[0].video}
-                    controls
-                    className="w-full h-full rounded-md"
-                  />
-                </div>
-              ) : (
+                className="flex flex-col h-full hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30 overflow-hidden"
+              >                
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <img src={project.image} alt="Placeholder Image" />
-                </div>
-              )}
+                  <img src={project.image}
+                  alt={`${project.title} preview`}
+                  loading="lazy"              
+                  className="w-full h-full object-cover" />
+                </div>          
       
                 <CardHeader>
                   <div className="flex items-center justify-between">
@@ -107,7 +101,7 @@ const PortfolioSection = () => {
                   </div>
                 </CardHeader>
       
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 flex flex-col h-full">
                   <p className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
@@ -125,24 +119,37 @@ const PortfolioSection = () => {
                   </div>
       
                   {project.status === "completed" && (
-                    <div className="flex gap-3 pt-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1 "
-                        onClick={() => window.open(project.github, "_blank")}
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </Button>
-                      <Button
-                        size="sm"
-                        className="flex-1 btn-glow"
-                        onClick={() => window.open(project.live, "_blank")}
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Preview
-                      </Button>
+                    <div className="flex-1 flex flex-col justify-end mt-auto">
+                      <div className="flex gap-3 mt-auto">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 btn-glow"
+                          onClick={() => window.open(project.github, "_blank")}
+                        >
+                          <Github className="h-4 w-4 mr-2" />
+                          Code
+                        </Button>
+                        <Button
+                          size="sm"
+                          className="flex-1 btn-glow"
+                          onClick={() => window.open(project.live, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Preview
+                        </Button>
+                        {project.video && (
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="flex-1 btn-glow"
+                            onClick={() => window.open(project.video, "_blank")}
+                          >
+                            <Play className="h-4 w-4 mr-2" />
+                            Watch Demo
+                          </Button>
+                      )}
+                      </div>
                     </div>
                   )}
                 </CardContent>
