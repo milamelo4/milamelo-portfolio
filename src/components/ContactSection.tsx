@@ -75,7 +75,7 @@ const ContactSection = () => {
         id="contact"
         className={`py-10 sm:py-20 transition-all duration-700 ${
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
-        }`}
+        } scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-16`}
       >
         <div className="container mx-auto px-0 sm:px-6 text-left">
           <div className="mb-16 text-center">

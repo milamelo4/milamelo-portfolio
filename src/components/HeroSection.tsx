@@ -11,8 +11,10 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 lg:px-20 text-center pt-10">
-      <section id="home" className="min-h-screen flex items-center justify-center py-10 bg-gradient-to-b from-background to-secondary py-10 sm:py-20">
+    <div className="max-w-[1280px] mx-auto px-4 lg:px-20 text-center  mt-16 sm:mt-10">
+      <section id="home" 
+      className="min-h-screen flex items-center justify-center py-10 bg-gradient-to-b from-background to-secondary py-10 sm:py-20
+      scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-18 animate-fade-in transition-all duration-700">
         <div className="container mx-auto px-2 sm:px-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
