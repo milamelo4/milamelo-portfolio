@@ -25,28 +25,20 @@ const PortfolioSection = () => {
       technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
       status: "completed",
       image: "assets/therapist.png",
-      video: 'undefined',
+      video: undefined,
       github: "https://github.com/milamelo4/therapist-template.git",
       live: "https://milamelo4.github.io/therapist-template/"
-    },
+    },    
     {
-      title: "Speech Pathologist Site",
-      description: "Accessibility-focused website designed specifically for dyslexic users. Features enhanced readability, clear navigation, and inclusive design principles.",
-      technologies: ["React", "ARIA", "WCAG 2.1", "Accessible Design", "CSS Grid"],
-      status: "coming-soon",
-      image: "/placeholder-project3.jpg",
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Python Data Insights",
-      description: "Data analysis project using Python, Pandas, and visualization libraries to generate meaningful insights from complex datasets.",
-      technologies: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis"],
-      status: "planned",
-      image: "/placeholder-project4.jpg",
-      github: "#",
-      live: "#"
-    }
+    title: "Python Data Insights",
+    description: "Data analysis project using Python, Pandas, and visualization libraries to generate meaningful insights from complex datasets.",
+    technologies: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis"],
+    status: "completed",
+    image: "assets/python.png", 
+    github: "https://github.com/milamelo4/sakila-rentals-analysis.git", 
+    live: "assets/data_analysis_report.pdf", 
+    video: undefined
+  }
   ];
 
   const getStatusBadge = (status: string) => {
@@ -120,11 +112,11 @@ const PortfolioSection = () => {
       
                   {project.status === "completed" && (
                     <div className="flex-1 flex flex-col justify-end mt-auto">
-                      <div className="flex gap-3 mt-auto">
+                      <div className="flex gap-2 mt-auto flex-wrap">
                         <Button
                           variant="outline"
                           size="sm"
-                          className="flex-1 btn-glow"
+                          className="flex-1 min-w-[100px] btn-glow"
                           onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github className="h-4 w-4 mr-2" />
@@ -132,7 +124,7 @@ const PortfolioSection = () => {
                         </Button>
                         <Button
                           size="sm"
-                          className="flex-1 btn-glow"
+                          className="flex-1 min-w-[100px] btn-glow"
                           onClick={() => window.open(project.live, "_blank")}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
@@ -142,7 +134,7 @@ const PortfolioSection = () => {
                           <Button
                             size="sm"
                             variant="outline"
-                            className="flex-1 btn-glow"
+                            className="flex-1 min-w-[100px] btn-glow"
                             onClick={() => window.open(project.video, "_blank")}
                           >
                             <Play className="h-4 w-4 mr-2" />
