@@ -52,7 +52,7 @@ const ServicesSection = () => {
               My <span className="hero-text">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              I offer comprehensive web development solutions tailored to your unique needs
+              I offer comprehensive web development solutions customized to your unique needs
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
