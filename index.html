@@ -1,33 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MilaMelo</title>
-    <meta name="description" content="Creative developer building clean, modern web experiences." />
+    <meta name="description"
+        content="Creative developer building clean, modern web experiences." />
     <meta name="author" content="Camila Melo" />
 
-    <!-- Open Graph (for social previews) -->
+    <!-- Google Fonts: connect early + load non-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+
+    <!-- Preload your built CSS (copy exact filename from View Source) -->
+    <link rel="preload" href="/assets/index-B03GsofU.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/assets/index-B03GsofU.css">
+    </noscript>
+
+    <!-- (Optional) Preload JS module (prod) -->
+    <link rel="modulepreload" href="/assets/index-DDPAij3I.js" crossorigin>
+
+    <!-- Preload above-the-fold image -->
+    <link rel="preload" as="image" href="/assets/profile-710.webp"
+        imagesrcset="/assets/profile-360.webp 360w, /assets/profile-710.webp 710w"
+        imagesizes="(max-width: 1024px) 320px, 384px">
+
+    <!-- Social previews -->
     <meta property="og:title" content="MilaMelo | Portfolio" />
-    <meta property="og:description" content="Creative developer building clean, modern web experiences." />
-    <meta property="og:type" content="website" />    
-    <meta property="og:image" content="https://milamelodev.com/assets/profile.png" />
+    <meta property="og:description"
+        content="Creative developer building clean, modern web experiences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="https://milamelodev.com/assets/profile.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Twitter Preview -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MilaMelo | Portfolio" />
-    <meta name="twitter:description" content="Creative developer building clean, modern web experiences." />
-    <meta name="twitter:image" content="https://milamelodev.com/assets/profile.png" />
+    <meta name="twitter:description"
+        content="Creative developer building clean, modern web experiences." />
+    <meta name="twitter:image"
+        content="https://milamelodev.com/assets/profile.png" />
 
-    <link rel="shortcut icon" href="assets/test2.png" type="image/x-icon">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
 </head>
-
-<body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-</body>
-
-</html>

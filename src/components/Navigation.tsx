@@ -44,10 +44,10 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-700 backdrop-blur-md border-b border-border shadow-md shadow-black/10 border-b border-gray-600">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">          
         <div className="flex items-center gap-x-2 inline-flex ">
-          <span className="font-inter hero-text font-semibold text-lg tracking-wider">MilaMelo</span>
+          <img src="/assets/logo.png" alt="MilaMelo Logo" width={50} height={50}/>
         </div>        
 
           {/* Desktop Navigation */}

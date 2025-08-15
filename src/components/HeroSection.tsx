@@ -75,7 +75,16 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-10 animate-pulse"></div>
-                <img src={`${import.meta.env.BASE_URL}assets/profile.png`} alt="Profile picture" className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale" />                
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/profile-710.webp`}
+                  srcSet={`${import.meta.env.BASE_URL}assets/profile-360.webp 360w, ${import.meta.env.BASE_URL}assets/profile-710.webp 710w`}
+                  sizes="(max-width: 1024px) 320px, 384px"
+                  alt="Camila DeMelo profile picture"
+                  className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale"
+                  decoding="async"
+                  width="710" height="710" 
+                />
+         
               </div>            
             </div>
           </div>

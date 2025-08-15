@@ -8,38 +8,51 @@ import zCleaningVideo from "/videos/zcleaning.mp4";
 
 const PortfolioSection = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const projects = [
-    {
-      title: "ZCleaning App",
-      description: "A full-stack business app built for a real cleaning company. Features include client scheduling, payment tracking, and multi-user role management. This was my senior project and showcases the full development lifecycle—from planning to deployment.",
-      technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
-      status: "completed",
-      video: zCleaningVideo, // Placeholder for video link
-      image: "assets/zcleaning.png",
-      github: "https://github.com/milamelo4/zcleaning-app.git",
-      live: "https://zcleaning-app.onrender.com"
-    },
-    {
-      title: "Therapist Website",
-      description: "Responsive one-page template for therapists. Includes sections for services, about, testimonials, and a contact form placeholder. Deployed to GitHub Pages.",
-      technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
-      status: "completed",
-      image: "assets/therapist.png",
-      video: undefined,
-      github: "https://github.com/milamelo4/therapist-template.git",
-      live: "https://milamelo4.github.io/therapist-template/"
-    },    
-    {
+const projects = [
+  {
+    title: "ZCleaning App",
+    description:
+      "A full-stack business app built for a real cleaning company. Features include client scheduling, payment tracking, and multi-user role management. This was my senior project and showcases the full development lifecycle—from planning to deployment.",
+    technologies: ["Node.js", "Express", "Bootstrap", "PostgreSQL", "Render", "Google OAuth"],
+    status: "completed",
+    video: zCleaningVideo, // Placeholder for video link
+    imageLg: "assets/zcleaning-1600.webp",
+    imageMd: "assets/zcleaning-800.webp",
+    width: 1880,
+    height: 861,
+    github: "https://github.com/milamelo4/zcleaning-app.git",
+    live: "https://zcleaning-app.onrender.com"
+  },
+  {
+    title: "Therapist Website",
+    description:
+      "Responsive one-page template for therapists. Includes sections for services, about, testimonials, and a contact form placeholder. Deployed to GitHub Pages.",
+    technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
+    status: "completed",
+    imageLg: "assets/therapist-1660.webp",
+    imageMd: "assets/therapist-800.webp",
+    width: 1660,
+    height: 916,
+    video: undefined,
+    github: "https://github.com/milamelo4/therapist-template.git",
+    live: "https://milamelo4.github.io/therapist-template/"
+  },
+  {
     title: "Python Data Insights",
-    description: "Data analysis project using Python, Pandas, and visualization libraries to generate meaningful insights from complex datasets.",
+    description:
+      "Data analysis project using Python, Pandas, and visualization libraries to generate meaningful insights from complex datasets.",
     technologies: ["Python", "Pandas", "Matplotlib", "Jupyter", "Data Analysis"],
     status: "completed",
-    image: "assets/python.png", 
-    github: "https://github.com/milamelo4/sakila-rentals-analysis.git", 
-    live: "assets/data_analysis_report.pdf", 
+    imageLg: "assets/python-790.webp",
+    imageMd: "assets/python-400.webp",
+    width: 790,
+    height: 542,
+    github: "https://github.com/milamelo4/sakila-rentals-analysis.git",
+    live: "assets/data_analysis_report.pdf",
     video: undefined
   }
-  ];
+];
+
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -79,11 +92,20 @@ const PortfolioSection = () => {
                 className="flex flex-col h-full hover-scale animate-smooth bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-primary/30 overflow-hidden"
               >                
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <img 
-                  src={`${import.meta.env.BASE_URL}${project.image}`}
-                  alt={`${project.title} preview`}
-                  loading="lazy"              
-                  className="w-full h-full object-cover" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${project.imageLg}`}
+                    srcSet={`
+                      ${import.meta.env.BASE_URL}${project.imageMd} 800w,
+                      ${import.meta.env.BASE_URL}${project.imageLg} 1600w
+                    `}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt={`${project.title} preview`}
+                    loading="lazy"
+                    decoding="async"
+                    width={project.width}
+                    height={project.height}
+                    className="w-full h-full object-cover"
+                  />            
                 </div>          
       
                 <CardHeader>
