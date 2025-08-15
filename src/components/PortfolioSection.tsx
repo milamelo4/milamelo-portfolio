@@ -72,7 +72,7 @@ const projects = [
       <section
         ref={ref}
         id="portfolio"
-        className={`py-10 sm:py-20 bg-gradient-to-b from-background to-muted/20 transition-all duration-700 ${
+        className={`cv-auto py-10 sm:py-20 bg-gradient-to-b from-background to-muted/20 transition-all duration-700 ${
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
         } scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-16`}
       >
@@ -139,6 +139,7 @@ const projects = [
                           variant="outline"
                           size="sm"
                           className="flex-1 min-w-[100px] btn-glow"
+                          aria-label="Github Repository"
                           onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github className="h-4 w-4 mr-2" />
@@ -147,6 +148,7 @@ const projects = [
                         <Button
                           size="sm"
                           className="flex-1 min-w-[100px] btn-glow"
+                          aria-label="Live Preview"
                           onClick={() => window.open(project.live, "_blank")}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
@@ -157,6 +159,7 @@ const projects = [
                             size="sm"
                             variant="outline"
                             className="flex-1 min-w-[100px] btn-glow"
+                            aria-label="Watch Demo"
                             onClick={() => window.open(project.video, "_blank")}
                           >
                             <Play className="h-4 w-4 mr-2" />

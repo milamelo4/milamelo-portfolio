@@ -144,3 +144,10 @@
         text-shadow: 0 0 20px hsl(193 100% 50% / 0.5);
     }
 }
+
+@layer utilities {
+    .cv-auto {
+        content-visibility: auto;
+        contain-intrinsic-size: 1000px 800px;
+    }
+}

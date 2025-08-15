@@ -27,7 +27,7 @@ const AboutSection = () => {
       <section
         ref={ref}
         id="about"
-        className={`py-10 sm:py-20 bg-gradient-to-b from-background to-muted/20 transition-all duration-700 ${
+        className={`cv-auto py-10 sm:py-20 bg-gradient-to-b from-background to-muted/20 transition-all duration-700 ${
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
         } scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-16` }
       >

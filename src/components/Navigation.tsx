@@ -56,6 +56,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
+                aria-label= {item.label}
                 className={`transition-colors hover:text-sky-300 shadow-sm ${
                   activeSection === item.href.substring(1)
                     ? "text-sky-300 font-semibold"
@@ -73,6 +74,8 @@ const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
+            
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </Button>

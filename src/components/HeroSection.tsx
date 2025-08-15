@@ -34,12 +34,12 @@ const HeroSection = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button onClick={scrollToContact} variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48">
+                <Button onClick={scrollToContact} variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48" aria-label="Get In Touch">
                   <Mail className="mr-2 h-4 w-4" />
                   Get In Touch
                 </Button>
                 <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
-                  <Button variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48">
+                  <Button variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48" aria-label="Download Resume">
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </Button>
