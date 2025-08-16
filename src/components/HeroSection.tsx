@@ -41,7 +41,12 @@ const HeroSection = () => {
                 className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48 h-11 sm:h-10 px-6 text-base sm:text-sm leading-[1.2]"
               >
                 <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
-                 <span className="[font-size-adjust:0.5]">Get In Touch</span>
+                <span
+                  className="sm:font-sans"
+                  style={{ fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif' }}
+                >
+                  Get In Touch
+                </span>
               </Button>
 
               <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
