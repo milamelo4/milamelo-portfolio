@@ -33,24 +33,29 @@ const HeroSection = () => {
                   design and code.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button onClick={scrollToContact} variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48" aria-label="Get In Touch">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Get In Touch
-                </Button>
-                <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
-                  <Button 
-                    variant="outline" 
-                    aria-label="Download Resume"
-                    className="btn-glow border-primary hover:bg-sky-600 hover:text-white h-12 min-w-[12rem] px-6 text-base leading-[1.2]"
-  
-                  >
-                    <Download className="mr-2 h-4 w-4" aria-hidden="true"/>
-                    Download Resume
-                  </Button>
-                </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button
+                onClick={scrollToContact}
+                variant="outline"
+                aria-label="Get In Touch"
+                className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48 h-11 sm:h-10 px-6 text-base sm:text-sm leading-[1.2]"
+              >
+                <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
+                Get In Touch
+              </Button>
 
-              </div>
+              <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
+                <Button
+                  variant="outline"
+                  aria-label="Download Resume"
+                  className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48 h-11 sm:h-10 px-6 text-base sm:text-sm leading-[1.2]"
+                >
+                  <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Download Resume
+                </Button>
+              </a>
+            </div>
+
               <div className="flex gap-6 justify-center lg:justify-start">
                 <a
                   href="https://github.com/milamelo4"
