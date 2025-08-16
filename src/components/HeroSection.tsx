@@ -39,8 +39,13 @@ const HeroSection = () => {
                   Get In Touch
                 </Button>
                 <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
-                  <Button variant="outline" className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48" aria-label="Download Resume">
-                    <Download className="mr-2 h-4 w-4" />
+                  <Button 
+                    variant="outline" 
+                    aria-label="Download Resume"
+                    className="btn-glow border-primary hover:bg-sky-600 hover:text-white h-12 min-w-[12rem] px-6 text-base leading-[1.2]"
+  
+                  >
+                    <Download className="mr-2 h-4 w-4" aria-hidden="true"/>
                     Download Resume
                   </Button>
                 </a>
