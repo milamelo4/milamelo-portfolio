@@ -83,6 +83,7 @@ const HeroSection = () => {
                   className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale"
                   decoding="async"
                   width="710" height="710" 
+                  fetchPriority="high"
                 />
          
               </div>            
