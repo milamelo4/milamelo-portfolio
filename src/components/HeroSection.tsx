@@ -45,15 +45,18 @@ const HeroSection = () => {
               </Button>
 
               <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
-                <Button
-                  variant="outline"
-                  aria-label="Download Resume"
-                  className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48 h-11 sm:h-10 px-6 text-base sm:text-sm leading-[1.2]"
-                >
-                  <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-                  <span className="[font-size-adjust:0.5]">Download Resume</span>
-                </Button>
-              </a>
+              <Button
+                variant="outline"
+                aria-label="Download Resume"
+                className="btn-glow border-primary hover:bg-sky-600 hover:text-white w-full sm:w-48 h-11 sm:h-10 px-6 text-base sm:text-sm leading-[1.2]"
+              >
+                <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+                <span className="inline-block w-[9.5rem] sm:w-auto [font-size-adjust:0.5]">
+                  Download Resume
+                </span>
+              </Button>
+            </a>
+
             </div>
 
               <div className="flex gap-6 justify-center lg:justify-start">
