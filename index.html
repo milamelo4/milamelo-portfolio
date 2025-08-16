@@ -12,21 +12,29 @@
     <!-- Google Fonts: connect early + load non-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload Inter latin .woff2 files for the weights you use (400/500/600/700) -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5nw.woff2">
+    <!-- 400 latin -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa15L7W0Q5nw.woff2">
+    <!-- 500 latin -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">
+    <!-- 600 latin -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1JL7W0Q5nw.woff2">
+    <!-- 700 latin -->
+
+    <!-- Load the stylesheet non-blocking (swap is instant because fonts are preloaded) -->
     <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     </noscript>
-
-    <!-- Preload your built CSS (copy exact filename from View Source) -->
-    <!-- <link rel="preload" href="/assets/index-B03GsofU.css" as="style"
-            onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/index-B03GsofU.css"></noscript> -->
-
-    <!-- (Optional) Preload JS module (prod) -->
-    <!-- <link rel="modulepreload" href="/assets/index-DDPAij3I.js" crossorigin> -->
 
     <!-- Preload above-the-fold image -->
     <link rel="preload" as="image" href="/assets/profile-710.webp"
