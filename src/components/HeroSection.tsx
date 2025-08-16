@@ -52,22 +52,25 @@ const HeroSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
+                  aria-label="GitHub"
                 >
-                  <Github className="h-6 w-6" />
+                  <Github className="h-6 w-6" aria-hidden="true"/>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/camila-demelo-6aa66647"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
+                  aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-6 w-6" />
+                  <Linkedin className="h-6 w-6" aria-hidden="true"/>
                 </a>
                 <a
                   href="mailto:milamelodev@gmail.com"
                   className="p-3 rounded-full bg-secondary hover:bg-sky-600 transition-colors hover-scale"
+                  aria-label="Email"
                 >
-                  <Mail className="h-6 w-6" />
+                  <Mail className="h-6 w-6" aria-hidden="true"/>
                 </a>
               </div>
             </div>

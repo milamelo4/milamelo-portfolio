@@ -119,7 +119,7 @@ const Footer = () => {
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-5 w-5" aria-hidden="true"/>
             </a>
             <a
               href="https://www.linkedin.com/in/camila-demelo-6aa66647"
@@ -128,14 +128,14 @@ const Footer = () => {
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5" aria-hidden="true"/>
             </a>
             <a
               href="mailto:milamelodev@gmail.com"
               className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors hover-scale"
               aria-label="Email"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-5 w-5" aria-hidden="true"/>
             </a>
           </div>
         </div>        
