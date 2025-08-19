@@ -77,7 +77,7 @@ const Navigation = () => {
             aria-label="Toggle navigation"
             
           >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
+            {isOpen ? <X size={16} strokeWidth={2.5}/> : <Menu size={16} strokeWidth={2.5}/>}
           </Button>
         </div>
 
