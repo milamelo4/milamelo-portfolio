@@ -89,6 +89,12 @@
     body {
         @apply bg-background text-foreground font-inter;
     }
+
+    html {
+        /* scroll-padding-top: 72px; */
+        /* adjust if your nav height differs */
+        scroll-behavior: auto !important;
+    }
 }
 
 @layer components {
