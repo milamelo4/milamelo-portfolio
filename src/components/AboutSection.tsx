@@ -64,8 +64,20 @@ const AboutSection = () => {
             </div>      
             <div className="space-y-6 flex items-start ">
               <div className="gap-3">
-                <img src={`${import.meta.env.BASE_URL}assets/profile2.JPEG`} alt="Camila DeMelo" width={1200} height={1600} loading="lazy" decoding="async" className="block w-full h-auto mb-4 rounded-lg" />
-
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/camila-demelo-hero-1200.webp`}
+                  srcSet={`
+                    ${import.meta.env.BASE_URL}assets/camila-demelo-hero-600.webp 600w,
+                    ${import.meta.env.BASE_URL}assets/camila-demelo-hero-1200.webp 1200w
+                  `}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  alt="Camila DeMelo web developer profile photo"
+                  width={1200}
+                  height={828}
+                  loading="lazy"
+                  decoding="async"
+                  className="block w-full h-auto mb-4 rounded-lg"
+                />
               </div>
             </div>
 
