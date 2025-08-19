@@ -49,7 +49,7 @@ const HeroSection = () => {
                 </span>
               </Button>
 
-              <a href={`${import.meta.env.BASE_URL}resume2.pdf`} download>
+              <a href={`${import.meta.env.BASE_URL}resume.pdf`} download>
               <Button
                 variant="outline"
                 aria-label="Download Resume"
