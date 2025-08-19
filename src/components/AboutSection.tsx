@@ -40,7 +40,8 @@ const AboutSection = () => {
               A passionate developer with a unique perspective and global experience
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-end">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            
             {/* Bio */}
             <div className="space-y-8">
               <div className="card-gradient">
@@ -59,15 +60,42 @@ const AboutSection = () => {
                     My approach blends technical skills with a strong eye for design, which helps me create websites that are not only functional but also accessible and intuitive for everyone.
                   </p>
                 </div>
+              </div >
+            </div>      
+            <div className="space-y-6 flex items-start ">
+              <div className="gap-3 mb-4">
+                <img src="/assets/profile2.JPEG" alt="" className="flex gap-3 mb-4 rounded-lg "/>
               </div>
+            </div>
+
+            {/* Education */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold mb-6">Education & Certifications</h3>
+                <div className="space-y-4">
+                  {education.map((item, index) => (
+                    <Card key={index} className="hover-scale animate-smooth">
+                      <CardContent className="p-6">
+                        <div className="flex items-start gap-4">
+                          <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                            {item.icon}
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-lg mb-1">{item.degree}</h4>
+                            <p className="text-muted-foreground">{item.year}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+            </div>
             {/* Skills */}
             <div className="space-y-8">
               <div className="card-gradient p-6 rounded-lg">
-      
-             <div className="flex items-center gap-3 mb-4">
-              <Laptop2  className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold">Technical Skills</h3>
-            </div>
+              <div className="flex items-center gap-3 mb-4">
+                <Laptop2  className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-semibold">Technical Skills</h3>
+              </div>
                 <div className="flex flex-wrap gap-3 text-sm">
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">HTML</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">CSS</span>
@@ -81,49 +109,28 @@ const AboutSection = () => {
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Git</span>
                 </div>
               </div>
-            </div>
-            </div>
-      
-            {/* Education */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6">Education & Certifications</h3>
-              <div className="space-y-4">
-                {education.map((item, index) => (
-                  <Card key={index} className="hover-scale animate-smooth">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                          {item.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-lg mb-1">{item.degree}</h4>
-                          <p className="text-muted-foreground">{item.year}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-      
+
               {/* Skills Highlight */}
-              <div className="mt-8 p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/20">
-                <h4 className="font-semibold text-lg mb-3">Key Strengths</h4>
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Visual Problem Solving</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Accessibility Focus</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>Clean Code Practices</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>User-Centric Design</span>
+              <div>
+                <div className="mt-8 p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/20">
+                  <h4 className="font-semibold text-lg mb-3">Key Strengths</h4>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span>Visual Problem Solving</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span>Accessibility Focus</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span>Clean Code Practices</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span>User-Centric Design</span>
+                    </div>
                   </div>
                 </div>
               </div>
