@@ -63,14 +63,14 @@ const AboutSection = () => {
               </div >
             </div>      
             <div className="space-y-6 flex items-start ">
-              <div className="gap-3 mb-4">
+              <div className="gap-3">
                 <img src="/assets/profile2.JPEG" alt="" className="flex gap-3 mb-4 rounded-lg "/>
               </div>
             </div>
 
             {/* Education */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6">Education & Certifications</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">Education & Certifications</h3>
                 <div className="space-y-4">
                   {education.map((item, index) => (
                     <Card key={index} className="hover-scale animate-smooth">
@@ -118,18 +118,18 @@ const AboutSection = () => {
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>Visual Problem Solving</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span>Accessibility Focus</span>
-                    </div>
+                    </div>                    
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>Clean Code Practices</span>
-                    </div>
+                    </div>                    
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>User-Centric Design</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span>Accessibility Focused Design</span>
                     </div>
                   </div>
                 </div>
@@ -140,7 +140,6 @@ const AboutSection = () => {
       </section>
     </div>
   );
-  
 };
 
 export default AboutSection;

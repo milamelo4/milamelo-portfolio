@@ -14,33 +14,42 @@ const Navigation = () => {
     { href: "#contact", label: "Contact" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
+useEffect(() => {
+  const ids = navItems.map(n => n.href.slice(1));
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleScroll = () => {
+    const header = document.querySelector('nav') as HTMLElement | null;
+    const headerH = header?.offsetHeight ?? 0;
+
+    // Line we compare against (just below the fixed header)
+    const y = window.scrollY + headerH + 1;
+
+    let current = ids[0];
+    for (const id of ids) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      if (el.offsetTop <= y) {
+        current = id; // keep the last one above the line
+      }
+    }
+    setActiveSection(current);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // run once on load
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+
 
   const scrollTo = (href: string) => {
     const element = document.getElementById(href.substring(1));
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
-  };
+  setIsOpen(false);
+};
+
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-700 backdrop-blur-md border-b border-border shadow-md shadow-black/10 border-b border-gray-600">

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Circle } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -140,10 +140,14 @@ const Footer = () => {
           </div>
         </div>        
       </div>
-      <div className="mt-8 pt-8 border-t border-border text-center">
+      <div className="mt-8 pt-8 border-t border-border text-center ">
           <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-            © {currentYear} MilaMelo. Made with <Heart className="h-4 w-4 text-primary fill-500" /> All rights reserved.
+            © {currentYear} MilaMelo <Heart className="text-current h-3 w-3 text-primary-500" /> 
+           
           </p>
+          
+           <p className="text-muted-foreground text-sm">Designed & Developed by MilaMelo.</p>
+          <p className="text-muted-foreground text-xs"> </p>
         </div>
     </footer>
   );
