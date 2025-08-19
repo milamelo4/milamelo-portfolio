@@ -18,22 +18,26 @@ useEffect(() => {
   const ids = navItems.map(n => n.href.slice(1));
 
   const handleScroll = () => {
-    const header = document.querySelector('nav') as HTMLElement | null;
+    const header = document.querySelector("nav") as HTMLElement | null;
     const headerH = header?.offsetHeight ?? 0;
-
-    // Line we compare against (just below the fixed header)
     const y = window.scrollY + headerH + 1;
 
     let current = ids[0];
+    let minDistance = Number.POSITIVE_INFINITY;
+
     for (const id of ids) {
       const el = document.getElementById(id);
       if (!el) continue;
-      if (el.offsetTop <= y) {
-        current = id; // keep the last one above the line
+      const distance = Math.abs(el.offsetTop - y);
+      if (distance < minDistance) {
+        minDistance = distance;
+        current = id;
       }
     }
+
     setActiveSection(current);
-  };
+};
+
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // run once on load
@@ -62,10 +66,11 @@ useEffect(() => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
-                onClick={() => scrollTo(item.href)}
-                aria-label= {item.label}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                aria-label={item.label}
                 className={`transition-colors hover:text-sky-300 shadow-sm ${
                   activeSection === item.href.substring(1)
                     ? "text-sky-300 font-semibold"
@@ -73,7 +78,7 @@ useEffect(() => {
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -92,22 +97,24 @@ useEffect(() => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollTo(item.href)}
-                className={`block w-full text-left transition-colors hover:text-primary ${
-                  activeSection === item.href.substring(1)
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-        )}
+  <div className="md:hidden mt-4 pb-4 space-y-4">
+    {navItems.map((item) => (
+      <a
+        key={item.href}
+        href={item.href}
+        onClick={() => setIsOpen(false)}
+        className={`block w-full text-left transition-colors hover:text-primary ${
+          activeSection === item.href.substring(1)
+            ? "text-primary"
+            : "text-muted-foreground"
+        }`}
+      >
+        {item.label}
+      </a>
+    ))}
+  </div>
+)}
+
       </div>
     </nav>
   );

@@ -64,7 +64,8 @@ const AboutSection = () => {
             </div>      
             <div className="space-y-6 flex items-start ">
               <div className="gap-3">
-                <img src="/assets/profile2.JPEG" alt="" className="flex gap-3 mb-4 rounded-lg "/>
+                <img src={`${import.meta.env.BASE_URL}assets/profile2.JPEG`} alt="Camila DeMelo" width={1200} height={1600} loading="lazy" decoding="async" className="block w-full h-auto mb-4 rounded-lg" />
+
               </div>
             </div>
 
