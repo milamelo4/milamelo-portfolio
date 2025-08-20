@@ -199,7 +199,7 @@ const ContactSection = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-secondary/50 p-4 rounded-lg ">
-                <h3 className="text-2xl font-bold mb-4 text-center">Get in Touch</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center text-primary">Get in Touch</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8 px-4">
                   I'm always excited to discuss new projects and opportunities.
                   Whether you need a complete web application or just want to chat

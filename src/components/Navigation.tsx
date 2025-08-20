@@ -61,7 +61,7 @@ useEffect(() => {
         <div className="flex items-center justify-between">          
         <div className="flex items-center gap-x-2 inline-flex ">
           <a href="#home" aria-label="Go to home">
-            <img src="/assets/logo.png" alt="MilaMelo Logo" width={50} height={50}/>
+            <img src="/assets/logo.png" alt="MilaMelo Logo" width={50} height={50} title="Home"/>
           </a>
         </div>        
 

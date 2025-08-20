@@ -4,7 +4,7 @@
     padding: 3rem;
     text-align: center;
 } */
-.test {
+/* .test {
     color: #5F777F !important;
 }
 .logo {
@@ -20,14 +20,14 @@
 
 .logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 /* Keep anchor targets below the fixed navbar */
 /* html {
     scroll-padding-top: 4.5rem;
     scroll-behavior: auto !important;
 } */
-
+/* 
 @keyframes logo-spin {
     from {
         transform: rotate(0deg);
@@ -50,4 +50,4 @@
 
 .read-the-docs {
     color: #888;
-}
+} */

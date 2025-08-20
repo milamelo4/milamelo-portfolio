@@ -118,11 +118,19 @@ const AboutSection = () => {
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">JavaScript</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Python</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Node.js</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Express.js</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">React</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">PostgreSQL</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">MongoDB</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">MySQL</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Sass</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Bootstrap</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Tailwind CSS</span>
                   <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Git</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">GitHub</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">Render</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">REST APIs</span>
+                  <span className="px-3 py-1 rounded-full bg-muted text-muted-foreground">OAuth</span>
                 </div>
               </div>
 
