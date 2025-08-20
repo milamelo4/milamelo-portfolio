@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, MapPin, Code2, Laptop2, ScrollIcon,  } from "lucide-react";
+import { GraduationCap, MapPin, Code2, Laptop2, ScrollIcon, Key } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
@@ -31,9 +31,9 @@ const AboutSection = () => {
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
         } scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-16` }
       >
-        <div className="container mx-auto px-0 sm:px-6 text-left">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="px-0 sm:px-6 text-left">
+          <div className="mb-10 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               About <span className="hero-text">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -51,11 +51,12 @@ const AboutSection = () => {
                     <span className="text-lg font-semibold">Salt Lake City, Utah</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    I'm Camila DeMelo — a web developer based in Salt Lake City, originally from São Paulo, Brazil. I bring a global perspective to everything I create.
+                    I'm Camila DeMelo — a web developer based in Salt Lake City, originally from São Paulo, Brazil. I bring a global perspective to everything I create, and I'm fluent in English, Portuguese, and Spanish.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     I'm passionate about coding, debugging, and building clean, user-friendly web experiences. As someone who's dyslexic and a highly visual thinker, I love solving complex problems through both design and code.
                   </p>
+                  
                   <p className="text-muted-foreground leading-relaxed">
                     My approach blends technical skills with a strong eye for design, which helps me create websites that are not only functional but also accessible and intuitive for everyone.
                   </p>
@@ -85,7 +86,7 @@ const AboutSection = () => {
 
             {/* Education */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6 text-center">Education & Certifications</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">Education & Certifications</h3>
                 <div className="space-y-4">
                   {education.map((item, index) => (
                     <Card key={index} className="hover-scale animate-smooth">
@@ -128,7 +129,10 @@ const AboutSection = () => {
               {/* Skills Highlight */}
               <div>
                 <div className="mt-8 p-6 rounded-lg bg-gradient-to-r from-primary/10 to-emerald-500/10 border border-primary/20">
-                  <h4 className="font-semibold text-lg mb-3">Key Strengths</h4>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Key className="h-6 w-6 text-primary" />
+                    <h4 className="text-xl font-semibold">Key Strengths</h4>
+                  </div>
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -145,12 +149,18 @@ const AboutSection = () => {
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>Accessibility Focused Design</span>
-                    </div>
-                  </div>
-                </div>
+                    </div>                    
+                  </div>  
+                                  
+                </div>   
+                             
               </div>
+              {/* New row for Languages */}
+
+
             </div>
           </div>
+          
         </div>
       </section>
     </div>

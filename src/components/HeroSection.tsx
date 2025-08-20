@@ -11,11 +11,11 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 lg:px-20 text-center  mt-16 sm:mt-10">
+    <div className="max-w-[1280px] mx-auto px-4 lg:px-20 text-center mt-16 sm:mt-10">
       <section id="home" 
       className="min-h-screen flex items-center justify-center py-10 bg-gradient-to-b from-background to-secondary py-10 sm:py-20
       scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-18 animate-fade-in transition-all duration-700">
-        <div className="container mx-auto px-2 sm:px-20">
+        <div className=" px-2 sm:px-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="text-left space-y-8">
@@ -92,9 +92,9 @@ const HeroSection = () => {
               </div>
             </div>
             {/* Profile Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end relative">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-10 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-10 animate-pulse z-0"></div>
                 <img
                   src={`${import.meta.env.BASE_URL}assets/profile-710.webp`}
                   srcSet={`${import.meta.env.BASE_URL}assets/profile-360.webp 360w, ${import.meta.env.BASE_URL}assets/profile-710.webp 710w`}
@@ -104,7 +104,8 @@ const HeroSection = () => {
                   decoding="async"
                   width="710" height="710" 
                    {...{ fetchpriority: "high" }} // bypass React’s prop check
-                />         
+                />   
+                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/30 to-transparent z-20" />      
               </div>            
             </div>
           </div>

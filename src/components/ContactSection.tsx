@@ -111,9 +111,9 @@ const ContactSection = () => {
           isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
         } scroll-mt-24 md:scroll-mt-24 lg:scroll-mt-16`}
       >
-        <div className="container mx-auto px-0 sm:px-6 text-left">
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="px-0 sm:px-6 text-left">
+          <div className="mb-10 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Let's <span className="hero-text">Connect</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -198,9 +198,9 @@ const ContactSection = () => {
             </Card>
             {/* Contact Information */}
             <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+              <div className="bg-secondary/50 p-4 rounded-lg ">
+                <h3 className="text-2xl font-bold mb-4 text-center">Get in Touch</h3>
+                <p className="text-muted-foreground leading-relaxed mb-8 px-4">
                   I'm always excited to discuss new projects and opportunities.
                   Whether you need a complete web application or just want to chat
                   about development, feel free to reach out!
