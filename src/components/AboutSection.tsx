@@ -40,7 +40,7 @@ const AboutSection = () => {
               A passionate developer with a unique perspective and global experience
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Bio */}
             <div className="space-y-8">
@@ -62,7 +62,7 @@ const AboutSection = () => {
                 </div>
               </div >
             </div>      
-            <div className="space-y-6 flex items-start ">
+            <div className="space-y-6 flex items-start relative">
               <div className="gap-3">
                 <img
                   src={`${import.meta.env.BASE_URL}assets/camila-demelo-hero-1200.webp`}
@@ -76,8 +76,10 @@ const AboutSection = () => {
                   height={828}
                   loading="lazy"
                   decoding="async"
-                  className="block w-full h-auto mb-4 rounded-lg"
+                  className="block w-full h-auto object-cover rounded-xl border border-white/10"
                 />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/30 to-transparent" />
+
               </div>
             </div>
 

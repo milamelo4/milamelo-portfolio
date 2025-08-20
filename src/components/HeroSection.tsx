@@ -104,8 +104,7 @@ const HeroSection = () => {
                   decoding="async"
                   width="710" height="710" 
                    {...{ fetchpriority: "high" }} // bypass React’s prop check
-                />
-         
+                />         
               </div>            
             </div>
           </div>
