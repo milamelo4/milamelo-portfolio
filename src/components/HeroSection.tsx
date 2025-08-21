@@ -97,12 +97,15 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-emerald-200 rounded-full blur-2xl opacity-10 animate-pulse z-0"></div>
                 <img
                   src={`${import.meta.env.BASE_URL}assets/profile-710.webp`}
-                  srcSet={`${import.meta.env.BASE_URL}assets/profile-360.webp 360w, ${import.meta.env.BASE_URL}assets/profile-710.webp 710w`}
+                  srcSet={`
+                    ${import.meta.env.BASE_URL}assets/profile-360.webp 360w, 
+                    ${import.meta.env.BASE_URL}assets/profile-710.webp 710w`}
                   sizes="(max-width: 1024px) 320px, 384px"
                   alt="Camila DeMelo profile picture"
-                  className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl hover-scale"
+                  className="relative rounded-full object-cover shadow-2xl hover-scale"
                   decoding="async"
-                  width="710" height="710" 
+                  width="384" 
+                  height="384" 
                    {...{ fetchpriority: "high" }} // bypass React’s prop check
                 />   
                 <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/30 to-transparent z-20" />      
