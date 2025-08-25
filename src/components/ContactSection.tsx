@@ -122,7 +122,7 @@ const ContactSection = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="hover-scale animate-smooth">
+            <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Send a Message</CardTitle>
               </CardHeader>
