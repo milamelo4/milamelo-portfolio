@@ -18,8 +18,8 @@ const projects = [
     video: zCleaningVideo, // Placeholder for video link
     imageLg: "assets/zcleaning-1600.webp",
     imageMd: "assets/zcleaning-800.webp",
-    width: 1880,
-    height: 861,
+    width: 1600,
+    height: 733,
     github: "https://github.com/milamelo4/zcleaning-app.git",
     live: "https://zcleaning-app.onrender.com"
   },
@@ -29,10 +29,10 @@ const projects = [
       "Responsive one-page template for therapists. Includes sections for services, about, testimonials, and a contact form placeholder. Deployed to GitHub Pages.",
     technologies: ["React", "Tailwind CSS", "Vite", "Responsive Design", "GitHub Pages", "Accessibility"],
     status: "completed",
-    imageLg: "assets/therapist-1660.webp",
+    imageLg: "assets/therapist-1600.webp",
     imageMd: "assets/therapist-800.webp",
     width: 1660,
-    height: 916,
+    height: 883,
     video: undefined,
     github: "https://github.com/milamelo4/therapist-template.git",
     live: "https://milamelo4.github.io/therapist-template/"
@@ -49,6 +49,20 @@ const projects = [
     height: 542,
     github: "https://github.com/milamelo4/sakila-rentals-analysis.git",
     live: "assets/data_analysis_report.pdf",
+    video: undefined
+  },
+  {
+    title: "Speech Pathologist Website",
+    description: 
+    "Responsive one-page website for a speech-language pathologist. Features sections for services, about, rates, and contact information. Optimized for mobile with clean, accessible design and deployed to GitHub Pages.",
+    technologies: ["React", "JavaScript", "Tailwind CSS", "Vite", "Responsive Design", "Accessibility"],
+    status: "completed",
+    imageLg: "assets/speech-1600.webp",
+    imageMd: "assets/speech-800.webp",
+    width: 1600,
+    height: 723,
+    github: "https://github.com/milamelo4/speech-therapy.git",
+    live: "https://milamelo4.github.io/speech-therapy/",
     video: undefined
   }
 ];
